@@ -32,7 +32,6 @@ class Manager < Employee
         end
         bonus
     end
-
 end
 
 
@@ -42,7 +41,6 @@ shawna = Employee.new("Shawna", "TA", 12000, "Daren")
 david = Employee.new("David", "TA", 10000, "Daren")
 daren = Manager.new("Daren", "TA Manager", 78000, "Ned", [shawna, david])
 ned = Manager.new("Ned", "Founder", 1000000, nil, [daren])
-
 
 puts ned.bonus(5) # => 500_000
 puts daren.bonus(4) # => 88_000
