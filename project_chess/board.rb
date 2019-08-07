@@ -19,14 +19,14 @@ class Board
     end
 
     def build_board
-        (0...rows.size).each do |row_idx|
-            (0..1).each do |col_idx|
+        (0..1).each do |row_idx|
+            (0...rows.size).each do |col_idx|
                  add_piece(Piece.new(:black,self, [row_idx,col_idx]), [row_idx,col_idx])
 
             end
         end
-        (0...rows.size).each do |row_idx|
-            (6..7).each do |col_idx|
+        (6..7).each do |row_idx|
+            (0...rows.size).each do |col_idx|
                  add_piece(Piece.new(:white,self, [row_idx,col_idx]), [row_idx,col_idx])
             end
         end
